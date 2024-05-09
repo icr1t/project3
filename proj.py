@@ -1,5 +1,7 @@
 import pandas as pd
 import streamlit as st
+import numpy as np
+import matplotlib.pyplot as plt
 
 data_kz = pd.read_excel('kz_2014.xlsx')
 data_kz1 = pd.read_excel('kz_2015.xlsx')
@@ -22,7 +24,7 @@ data_uzb1 = pd.read_excel('uzb_2015.xlsx')
 data_uzb2 = pd.read_excel('uzb_2016.xlsx')
 data_uzb3 = pd.read_excel('uzb_2017xlsx')
 
-import numpy as np
+
 
 df_kgz_2014 = pd.read_excel('kgz_2014.xlsx')
 df_kgz_2014.fillna(0)
@@ -128,7 +130,7 @@ tjk_values = [mod_sev_tjk_2014, mod_sev_tjk_2015, mod_sev_tjk_2016, mod_sev_tjk_
 
 uzb_values = [mod_sev_uzb_2014, mod_sev_uzb_2015, mod_sev_uzb_2016, mod_sev_uzb_2017]
 
-import matplotlib.pyplot as plt
+
 
 years = range(2014, 2018)
 
