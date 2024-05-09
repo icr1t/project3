@@ -132,16 +132,16 @@ uzb_values = [mod_sev_uzb_2014, mod_sev_uzb_2015, mod_sev_uzb_2016, mod_sev_uzb_
 
 
 
-years = range(2014, 2018)
+#years = range(2014, 2018)
 
-plt.figure(figsize=(10, 6))
-plt.plot(years, kgz_values, marker='o', linestyle='-', label='Казахстан')
-plt.plot(years, kz_values, marker='o', linestyle='-', label='Узбекистан')
-plt.plot(years, uzb_values, marker='o', linestyle='-', label='Кыргызстан')
-plt.plot(years, tjk_values, marker='o', linestyle='-', label='Таджикистан')
-plt.title('Центральная Азия')
-plt.xticks(years)
-plt.yticks(np.arange(0, 0.3, 0.05))
-plt.legend()
-plt.grid(True)
-plt.show()
+#plt.figure(figsize=(10, 6))
+#plt.plot(years, kgz_values, marker='o', linestyle='-', label='Казахстан')
+#plt.plot(years, kz_values, marker='o', linestyle='-', label='Узбекистан')
+#plt.plot(years, uzb_values, marker='o', linestyle='-', label='Кыргызстан')
+#plt.plot(years, tjk_values, marker='o', linestyle='-', label='Таджикистан')
+#plt.title('Центральная Азия')
+#plt.xticks(years)
+#plt.yticks(np.arange(0, 0.3, 0.05))
+#plt.legend()
+#plt.grid(True)
+#plt.show()
