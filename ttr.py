@@ -1,6 +1,7 @@
 import pandas as pd
 import streamlit as st
 import matplotlib.pyplot as plt
+import numpy as np
 
 # Загружаем данные
 data_kz = pd.read_excel('./333/kz_2014.xlsx')
@@ -24,37 +25,17 @@ data_uzb2 = pd.read_excel('./333/uzb_2016.xlsx')
 data_uzb3 = pd.read_excel('./333/uzb_2017.xlsx')
 
 # Определяем функции для построения графиков
-def plot_kz():
-    plt.plot(data_kz['Year'], data_kz['Prob_Mod_Sev'], label='Kazakhstan')
-    plt.xlabel('Year')
-    plt.ylabel('Probability')
-    plt.title('Probability of Moderate Severity in Kazakhstan')
-    plt.legend()
-    st.pyplot()
+years = [2014, 2015, 2016, 2017]
 
-def plot_kgz():
-    plt.plot(data_kgz['Year'], data_kgz['Prob_Mod_Sev'], label='Kyrgyzstan')
-    plt.xlabel('Year')
-    plt.ylabel('Probability')
-    plt.title('Probability of Moderate Severity in Kyrgyzstan')
-    plt.legend()
-    st.pyplot()
+def plot_country_graph(country, values, years):
+    fig, ax = plt.subplots(figsize=(10, 6))
+    ax.plot(years, values, marker='o', linestyle='-')
+    ax.set_title(country)
+    ax.set_xticks(years)
+    ax.set_yticks(np.arange(0, 0.31, 0.05))
+    ax.grid(True)
+    st.pyplot(fig)
 
-def plot_tjk():
-    plt.plot(data_tjk['Year'], data_tjk['Prob_Mod_Sev'], label='Tajikistan')
-    plt.xlabel('Year')
-    plt.ylabel('Probability')
-    plt.title('Probability of Moderate Severity in Tajikistan')
-    plt.legend()
-    st.pyplot()
-
-def plot_uzb():
-    plt.plot(data_uzb['Year'], data_uzb['Prob_Mod_Sev'], label='Uzbekistan')
-    plt.xlabel('Year')
-    plt.ylabel('Probability')
-    plt.title('Probability of Moderate Severity in Uzbekistan')
-    plt.legend()
-    st.pyplot()
 
 # Создаем кнопки и связываем их с соответствующими функциями построения графиков
 button_kz = st.button("Показать график для Kazakhstan")
