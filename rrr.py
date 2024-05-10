@@ -48,7 +48,7 @@ def plot_country_graph_altair(country, values, years):
     ).properties(
         width=500,
         height=300,
-        title=f'Probability of Moderate Severity in {country}'
+        title=f'{country}'
     )
     st.altair_chart(chart)
 
