@@ -16,7 +16,7 @@ data_kgz3 = pd.read_excel('./333/kgz_2017.xlsx')
 data_tjk = pd.read_excel('./333/tjk_2014.xlsx')
 data_tjk1 = pd.read_excel('./333/tjk_2015.xlsx')
 data_tjk2 = pd.read_excel('./333/tjk_2016.xlsx')
-data_tjk3 = pd.read_excel('tjk_2017.xlsx')
+data_tjk3 = pd.read_excel('./333/tjk_2017.xlsx')
 
 data_uzb = pd.read_excel('./333/uzb_2014.xlsx')
 data_uzb1 = pd.read_excel('./333/uzb_2015.xlsx')
