@@ -78,7 +78,7 @@ elif all_countries_button:
 
 elif bar_chart_button:
     options = {
-        "xAxis": {"type": "category", "data": ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]},
+        "xAxis": {"type": "category", "data": ["2014", "2015", "2016", "2017"]},
         "yAxis": {"type": "value"},
         "series": [
             {"data": [120, {"value": 200, "itemStyle": {"color": "#a90000"}}, 150, 80, 70, 110, 130], "type": "bar"}
