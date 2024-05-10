@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 # Загружаем данные
-data_kz = pd.read_excel('https://github.com/icr1t/project3/raw/main/333/kgz_2014.xlsx')
+data_kz = pd.read_excel('https://github.com/icr1t/project3/raw/main/333/kz_2014.xlsx')
 data_kz1 = pd.read_excel('https://github.com/icr1t/project3/raw/main/333/kz_2015.xlsx')
 data_kz2 = pd.read_excel('https://github.com/icr1t/project3/raw/main/333/kz_2016.xlsx')
 data_kz3 = pd.read_excel('https://github.com/icr1t/project3/raw/main/333/kz_2017.xlsx')
