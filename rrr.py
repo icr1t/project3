@@ -32,8 +32,6 @@ uzb_button = st.sidebar.button('Узбекистан')
 tjk_button = st.sidebar.button('Таджикистан')
 kgz_button = st.sidebar.button('Кыргызстан')
 all_countries_button = st.sidebar.button('Общий график')
-st.sidebar.header("Выберите тип графика")
-line_chart_button = st.sidebar.button('Линейный график')
 bar_chart_button = st.sidebar.button('Гистограмма')
 
 F_ad_Prob_Mod_Sev_kaz_values = [0.0737473506983265, 0.044529239425859325, 0.07208697980276833, 0.09025550050680399]
