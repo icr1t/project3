@@ -145,3 +145,15 @@ uzb_values = [mod_sev_uzb_2014, mod_sev_uzb_2015, mod_sev_uzb_2016, mod_sev_uzb_
 #plt.legend()
 #plt.grid(True)
 #plt.show()
+
+button_clicked = st.button("Казахстан")
+
+# Функция для отображения графика
+def plot_graph():
+    x = np.linspace(0, 10, 100)
+    y = np.sin(x)
+    plt.plot(x, y)
+    plt.xlabel('X')
+    plt.ylabel('Y')
+    plt.title('График синусоиды')
+    st.pyplot()
