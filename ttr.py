@@ -3,7 +3,7 @@ import streamlit as st
 import matplotlib.pyplot as plt
 
 # Загружаем данные
-data_kz = pd.read_excel('C:\Users\vande\Desktop\project\333\kz_2014.xlsx')
+data_kz = pd.read_excel('kz_2014.xlsx')
 data_kz1 = pd.read_excel('kz_2015.xlsx')
 data_kz2 = pd.read_excel('kz_2016.xlsx')
 data_kz3 = pd.read_excel('kz_2017.xlsx')
