@@ -32,7 +32,9 @@ uzb_button = st.sidebar.button('Узбекистан')
 tjk_button = st.sidebar.button('Таджикистан')
 kgz_button = st.sidebar.button('Кыргызстан')
 all_countries_button = st.sidebar.button('Общий график')
-bar_chart_button = st.sidebar.button('Установить стиль одиночного бара')
+st.sidebar.header("Выберите тип графика")
+line_chart_button = st.sidebar.button('Линейный график')
+bar_chart_button = st.sidebar.button('Гистограмма')
 
 F_ad_Prob_Mod_Sev_kaz_values = [0.0737473506983265, 0.044529239425859325, 0.07208697980276833, 0.09025550050680399]
 F_ad_Prob_Mod_Sev_uzb_values = [0.09872602667454446, 0.12482079148104783, 0.1033934827101725, 0.16342414956949367]
@@ -76,12 +78,15 @@ elif all_countries_button:
     ax.grid(True)
     st.pyplot(fig)
 
-elif bar_chart_button:
+if bar_chart_button:
     options = {
         "xAxis": {"type": "category", "data": ["2014", "2015", "2016", "2017"]},
         "yAxis": {"type": "value"},
         "series": [
-            {"data": [120, {"value": 200, "itemStyle": {"color": "#a90000"}}, 150, 80, 70, 110, 130], "type": "bar"}
+            {"name": "Казахстан", "data": F_ad_Prob_Mod_Sev_kaz_values, "type": "bar"},
+            {"name": "Узбекистан", "data": F_ad_Prob_Mod_Sev_uzb_values, "type": "bar"},
+            {"name": "Таджикистан", "data": F_ad_Prob_Mod_Sev_tjk_values, "type": "bar"},
+            {"name": "Кыргызстан", "data": F_ad_Prob_Mod_Sev_kgz_values, "type": "bar"}
         ],
     }
     st_echarts(options=options, height="400px")
